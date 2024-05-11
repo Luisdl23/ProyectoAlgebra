@@ -48,5 +48,11 @@ namespace ProyectoAlgebra
 
             
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Zen.Barcode.CodeQrBarcodeDraw Qrgenerado = Zen.Barcode.BarcodeDrawFactory.CodeQr;
+            pictureBox2.Image = Qrgenerado.Draw(labelcarnet.Text, 150);
+        }
     }
 }
