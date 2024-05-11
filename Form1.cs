@@ -32,18 +32,18 @@ namespace ProyectoAlgebra
             
             for (int i = 0; i < 4; i++)
             {
-                numerosAleatorios[i] = random.Next(10) + 1;
+                numerosAleatorios[i] = random.Next(0,10) ;
             }
 
             string textoGuardado = textBox1.Text;
-            textBox1.Select(4, 2);           
+            textBox1.Select(4, 2);
             string textoSeleccionado = textBox1.SelectedText;
-            string carnetnuevo = "2024"+ textoSeleccionado + numerosAleatorios[0] + numerosAleatorios[1] + numerosAleatorios[2];
+            string carnetnuevo = DateTime.Now.Year+ textoSeleccionado + numerosAleatorios[0] + numerosAleatorios[1] + numerosAleatorios[2];
          
             labelcarnet.Text = carnetnuevo;
 
 
-          
+            labelcarnet.Visible = true;
             
 
             
